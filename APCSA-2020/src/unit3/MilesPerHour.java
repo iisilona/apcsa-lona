@@ -17,11 +17,12 @@ public class MilesPerHour
 	private double mph;
 
 //runner calls milesperhour
-	public MilesPerHour(int dist, int hrs, int mins)
+  public MilesPerHour(int dist, int hrs, int mins)
 	{
 		setNums(distance, hours, minutes);
 	}
-			public void setNums(int dist, int hrs, int mins)
+	
+   public void setNums(int dist, int hrs, int mins)
 			{
 			distance=dist;
 			hours=hrs;
@@ -31,13 +32,14 @@ public class MilesPerHour
 //runner calls calcMPH
 	public void calcMPH()
 	{
-	mph=(distance/(hours+(minutes/60)));
+	mph=(distance/((double)hours+(minutes/60)));
 	}
 	
 //runner calls print
 	public void print()
 	{
-	out.printf("Ok! You travelled (miles), mph, distance, hours, minutes);
+	System.out.println(" Ok! You travelled " + distance + " miles in " + hours + " hours and " + minutes + " minutes.");
+	System.out.println( "Your speed was " + mph);
 	}
 	
 	//create a print or toString or both

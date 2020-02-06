@@ -15,7 +15,23 @@ public class DistanceRunner
 {
 	public static void main( String[] args )
 	{
-		//add test cases	
-			
+		Scanner keyboard = new Scanner(in);
+
+		out.print("Enter X1 :: ");
+		int X1 = keyboard.nextInt();
+
+		out.print("Enter Y1:: ");
+		int Y1 = keyboard.nextInt();
+
+		out.print("Enter X2 :: ");
+		int X2 = keyboard.nextInt();
+		
+		out.print("Enter Y2 ::");
+		int Y2 = keyboard.nextInt();
+		
+		calculateDist test = new calculateDist(X1, Y1, X2, Y2);
+		test.doDistance(X1, Y1, X2, Y2);
+		test.calcMPH();
+		test.print();
 	}
 }
