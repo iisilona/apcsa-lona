@@ -29,9 +29,9 @@ public class DistanceRunner
 		out.print("Enter Y2 ::");
 		int Y2 = keyboard.nextInt();
 		
-		calculateDist test = new calculateDist(X1, Y1, X2, Y2);
+		Distance test = new Distance();
 		test.doDistance(X1, Y1, X2, Y2);
-		test.calcMPH();
+		test.calcDistance();
 		test.print();
 	}
 }
