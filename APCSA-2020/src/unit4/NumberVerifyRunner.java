@@ -15,6 +15,17 @@ public class NumberVerifyRunner
 	public static void main ( String[] args )
 	{
 		//add in input
+	Scanner keyboard = new Scanner(System.in);
+		
+		out.print("Enter a whole number :: ");
+		double num = keyboard.nextDouble();
+	
+		System.out.println("5 is odd :: " + NumberVerify.isOdd(5));
+		System.out.println("5 is even :: " + NumberVerify.isEven(5));
+		
+		out.print("Enter a whole number :: ");
+		 num = keyboard.nextDouble();
+	
 		System.out.println("5 is odd :: " + NumberVerify.isOdd(5));
 		System.out.println("5 is even :: " + NumberVerify.isEven(5));
 		
