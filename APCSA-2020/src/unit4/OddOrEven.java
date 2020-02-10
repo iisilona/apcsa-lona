@@ -13,6 +13,7 @@ public class OddOrEven
 {
 	public static boolean isOdd( )
 	{
+		if 
 		return true;
 	}
 	public static boolean isEven( )

@@ -24,7 +24,7 @@ public class DiscountRunner
 		Discount test = new Discount();
         test.getDiscountedBill(amt);
         System.out.print("Bill after discount :: ");
-        System.out.println(amt);
+        System.out.printf("%.3f\n",amt);
         
         out.print("Enter the original bill amount :: ");
 		double amtA = keyboard.nextDouble();
