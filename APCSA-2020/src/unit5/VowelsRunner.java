@@ -1,11 +1,17 @@
+package unit5;
 //(c) A+ Computer Science
 //www.apluscompsci.com
+
 //Name -
 //Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
 
 public class VowelsRunner
 {
-	public static void main( String args[] )
+	public static void main( String a[] )
 	{
 		FirstLastVowel s = new FirstLastVowel();
 			
