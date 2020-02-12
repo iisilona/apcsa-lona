@@ -13,7 +13,7 @@ public class AvgLenRunner
 {
 	public static void main( String args[] )
 	{
-		AvgLen s = new FirstLastVowel();
+		AvgLen s = new AvgLen();
 		
 		System.out.println( s.go( "dog", "cats" ) ) ;
 		System.out.println( s.go( "aplus", "pigs" ) ) ;
