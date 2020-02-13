@@ -19,19 +19,11 @@ public class StringEqualityRunner
      String four = "Bird";
      
 		StringEquality test = new StringEquality(one, two);
-		{
-		if(test.checkEquality()) {
-			 System.out.println(test.toStringtrue());
-		 }
-		 else System.out.println(test.toStringfalse());
-		}
+		System.out.println(test.toString());
 	
-	StringEquality testtwo = new StringEquality(three, four);
+		StringEquality testtwo = new StringEquality(three, four);
+		System.out.println(testtwo.toString());
 	{
-	 if(test.checkEquality()) {
-		 System.out.println(testtwo.toStringtrue());
-	 }
-	 else System.out.println(testtwo.toStringfalse());
 	}
  }
 }

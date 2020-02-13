@@ -18,12 +18,12 @@ package unit5;
 import static java.lang.System.*;
 public class StringEquality
 {
-	private String wordOne, wordTwo;
+	public String wordOne, wordTwo;
 
 	public StringEquality(String one, String two)
 	{
 		setWords(one,two);
-		checkEquality();
+		toString();
      }
 
 	public void setWords(String one, String two)
@@ -34,19 +34,17 @@ public class StringEquality
 
 	public boolean checkEquality( )
 	{
-			if(wordOne.equals(wordTwo)) {
+			if(wordOne.compareTo(wordTwo) == 0) {
 				return true;
 			}
-			else return false;
+			return false;
 	}
-
-	public String toStringtrue()
+	public String toString()
 	{
-		return wordOne + " has the same letters as " + wordTwo + "\n";
-	}
-	
-	public String toStringfalse()
-	{
-		return wordOne + " does not have the same letters as " + wordTwo + "\n";
+		if (wordOne.equals(wordTwo))
+			{
+			return wordOne + " has the same letters as " + wordTwo + "\n";
+			}
+			return wordOne + " does not have the same letters as " + wordTwo + "\n";
 	}
 }
