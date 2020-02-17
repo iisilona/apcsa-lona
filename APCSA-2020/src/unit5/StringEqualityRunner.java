@@ -13,14 +13,7 @@ public class StringEqualityRunner
 {
 	public static void main( String args[] )
 	{
-		//hello goodbye
-//.one two
-three four
-TCEA UIL
-State Champions
-ABC ABC
-ABC CBA
-Same Same
+
 	 String one = "hello";
      String two = "goodbye";
      String three = "one";
