@@ -11,18 +11,23 @@ public class TriangleOne
 
 	public TriangleOne()
 	{
-		word="";
+		
 	}
 
 	public TriangleOne(String s)
 	{
+		setWord(s);
 	}
 
 	public void setWord(String s)
 	{
+		word = s;
 	}
 
 	public void print( )
 	{
+		for (int l = word.length(); l > -1; l--) {
+			printLine(word.substring(0, l));
+		}
 	}
 }
