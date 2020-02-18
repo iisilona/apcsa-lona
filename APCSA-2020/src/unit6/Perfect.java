@@ -8,16 +8,34 @@ import static java.lang.System.*;
 public class Perfect
 {
    private int number;
-
-	//add constructors
-
-	//add a set method
+	setNumber(a);
+	}
+	
+	public Perfect(int number) {
+		setNumber(a);
+	}
+	
+	public void setNumber(int number) {
+		number = a;
+	}
 
 	public boolean isPerfect()
 	{
-		return false;
+		String[] toSearch = Divisors.getDivisors(number).split(" ");
+		int[] ints = new int[toSearch.length];
+		for (byte index = 0; index < ints.length; index++) {
+			ints[index] = Integer.toSearchInt(toSearch[index]);
+		}
+		int sum = 0;
+		for (int i : ints) {
+			sum += i;
+		}
+		return (sum == number);
 	}
 
-	//add a toString	
+	public String toString() {
+		return number + " is" + ((isPerfect()) ? " " : " not ") + "perfect.";
+	}
+
 	
 }

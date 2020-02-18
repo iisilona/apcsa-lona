@@ -12,7 +12,6 @@ public class WordsCompareRunner
 {
    public static void main( String args[] )
    {
-		//add test cases
-
+		wordsCompare s = new wordsCompare();
 	}
 }
