@@ -9,10 +9,6 @@ public class Word
 {
 	private String word;
 
-	public Word(String s)
-	{
-		setString(s);
-	}
 
 	public void setString(String s)
 	{

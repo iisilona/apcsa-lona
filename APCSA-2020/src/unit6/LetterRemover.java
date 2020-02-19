@@ -9,14 +9,6 @@ public class LetterRemover
 {
    private String sentence;
    private char lookFor;
-
-	public LetterRemover()
-	{
-		setRemover(
-	}
-
-	//add in second constructor
-	
 	
 	public void setRemover(String s, char rem)
 	{
@@ -26,17 +18,22 @@ public class LetterRemover
 
 	public String removeLetters()
 	{
-		String cleaned=sentence;
-		int index = 0;
+		
+		int index = sentence.indexOf(lookFor);
 		while (index != -1) {
-			index = cleaned.indexOf(lookFor);
-			cleaned = cleaned.substring(0, index) + cleaned.substring(index + 1);
-			index = cleaned.indexOf(lookFor);
-		return cleaned;
+			sentence = sentence.substring(0, index) + sentence.substring(index + 1, sentence.length());
+			index = sentence.indexOf(lookFor);
+		}
+		return sentence;
 	}
 
 	public String toString()
 	{
 		return sentence + " - letter to remove " + lookFor;
+	}
+
+	public String finalString()
+	{
+		return sentence;
 	}
 }

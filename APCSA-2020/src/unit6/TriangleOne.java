@@ -9,12 +9,7 @@ public class TriangleOne
 {
 	private String word;
 
-	public TriangleOne()
-	{
-		
-	}
-
-	public TriangleOne(String s)
+	public toSet(String s)
 	{
 		setWord(s);
 	}
@@ -24,10 +19,10 @@ public class TriangleOne
 		word = s;
 	}
 
-	public void print( )
+	public void tPrint()
 	{
-		for (int l = word.length(); l > -1; l--) {
-			printLine(word.substring(0, l));
+		for (int i = word.length(); i > -1; i--) {
+			System.out.println(word.substring(0, i));
 		}
 	}
 }

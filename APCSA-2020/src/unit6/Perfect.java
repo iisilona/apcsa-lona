@@ -9,7 +9,7 @@ public class Perfect
 {
    private int number;
 	setNumber(a);
-	}
+
 	
 	public Perfect(int number) {
 		setNumber(a);
@@ -21,16 +21,11 @@ public class Perfect
 
 	public boolean isPerfect()
 	{
-		String[] toSearch = Divisors.getDivisors(number).split(" ");
-		int[] ints = new int[toSearch.length];
-		for (byte index = 0; index < ints.length; index++) {
-			ints[index] = Integer.toSearchInt(toSearch[index]);
-		}
-		int sum = 0;
-		for (int i : ints) {
-			sum += i;
-		}
-		return (sum == number);
+	   int divSum = 0;
+	    	while (divSum < number)
+	    		if (number % 2 == 0) {
+	    			divSum = divSum + (number/2);
+	    		}
 	}
 
 	public String toString() {
