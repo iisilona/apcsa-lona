@@ -8,9 +8,6 @@ import static java.lang.System.*;
 public class Perfect
 {
    private int number;
-	setNumber(a);
-	}
-	
 	public Perfect(int number) {
 		setNumber(a);
 	}
