@@ -21,16 +21,16 @@ public class Perfect
 
 	public boolean isPerfect()
 	{
-		String[] toSearch = Divisors.getDivisors(number).split(" ");
-		int[] ints = new int[toSearch.length];
-		for (byte index = 0; index < ints.length; index++) {
-			ints[index] = Integer.toSearchInt(toSearch[index]);
+		
+		for(i = 1 ; i < Number ; i++) {
+			if(Number % i == 0)  {
+				Sum = Sum + i;
+			}
 		}
-		int sum = 0;
-		for (int i : ints) {
-			sum += i;
+		if (sum == number) {
+			return (sum == number);
 		}
-		return (sum == number);
+		return (sum != number);
 	}
 
 	public String toString() {
