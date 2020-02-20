@@ -9,7 +9,7 @@ public class TriangleOne
 {
 	private String word;
 
-	public toSet(String s)
+	public void  toSet(String s)
 	{
 		setWord(s);
 	}
