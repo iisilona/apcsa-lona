@@ -9,7 +9,6 @@ public class PerfectRunner
 {
 	public static void main( String args[] )
 	{
-		
 		Perfect perf = new Perfect();
 		perf.setNumber(496);
 		System.out.println(perf.toString());
@@ -31,6 +30,6 @@ public class PerfectRunner
 		System.out.println(perf.toString());
 		perf.setNumber(33550336);
 		System.out.println(perf.toString());
-																
+
 	}
 }

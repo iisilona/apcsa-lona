@@ -9,6 +9,7 @@ public class Perfect
 {
    private int number;
 
+
 	public Perfect() {
 	}
 	
@@ -32,7 +33,5 @@ public class Perfect
 
 	public String toString() {
 		return number + " is" + ((isPerfect()) ? " " : " not ") + "perfect.";
-	}
-
-	
+	}	
 }

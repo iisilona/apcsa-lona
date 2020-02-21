@@ -31,6 +31,5 @@ public class WordsCompareRunner
 	System.out.println(s.toString());
         s.setWords("funnel", "fun");
 	System.out.println(s.toString());
-        
-	}
+   }
 }
