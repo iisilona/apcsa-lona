@@ -5,8 +5,6 @@ package unit6;
 
 import static java.lang.System.*;
 
-import unit5.wordsCompare;
-
 public class LetterRemoverRunner
 {
 	public static void main( String args[] )
