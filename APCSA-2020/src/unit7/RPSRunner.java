@@ -2,6 +2,8 @@
 // www.apluscompsci.com
 //Name -  
 
+package unit7;
+
 import java.util.Scanner;
 import static java.lang.System.*;
 
@@ -14,11 +16,10 @@ public class RPSRunner
 		
 		//add in a do while loop after you get the basics up and running
 		
-			String player = "";
 		
-			out.print("type in your prompt [R,P,S] :: ");
-			
-			//read in the player value
+			out.print("pick your weapon [R,P,S] :: ");
+			String player = keyboard.toString();
+			System.out.println
 		
 			RockPaperScissors game = new RockPaperScissors();		
 	}

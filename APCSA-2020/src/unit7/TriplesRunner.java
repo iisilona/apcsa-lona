@@ -2,6 +2,7 @@
 // www.apluscompsci.com
 //Name -  
 
+package unit7;
 import static java.lang.System.*;
 
 public class TriplesRunner
