@@ -9,8 +9,7 @@ public class Perfect
 {
    private int number;
 
-	public Perfect(int a) {
-		setNumber(a);
+	public Perfect() {
 	}
 	
 	public void setNumber(int a) {
@@ -24,6 +23,11 @@ public class Perfect
 	    		if (number % 2 == 0) {
 	    			divSum = divSum + (number/2);
 	    		}
+	     if (divSum == number)
+	     {
+	    	 return true;
+	     }
+	     else return false;
 	}
 
 	public String toString() {

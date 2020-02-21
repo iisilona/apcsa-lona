@@ -19,15 +19,15 @@ public class StringEqualityRunner
      String three = "one";
      String four = "two";
      String five = "three";
-     String six = "four"
+     String six = "four";
      String seven = "TCEA";
      String eight = "UIL";
      String nine = "State";
      String ten = "Champions";
-     String eleven = "ABC"
-     String twelve = "ABC"
-     String thirteen = "CBA"
-     String fourteen = "ABC"
+     String eleven = "ABC";
+     String twelve = "ABC";
+     String thirteen = "CBA";
+     String fourteen = "ABC";
      String sixteen = "Same";
      String fifteen = "Same";
      
@@ -56,4 +56,3 @@ public class StringEqualityRunner
 		System.out.println(testeight.toString());
 	}
  }
-}
