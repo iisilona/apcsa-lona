@@ -1,9 +1,3 @@
-//(c) A+ Computer Science
-// www.apluscompsci.com
-//Name -  
-
-package unit7;
-
 import java.util.Scanner;
 import static java.lang.System.*;
 
@@ -12,15 +6,10 @@ public class RockPaperScissors
 	private String playChoice;
 	private String compChoice;
 
-	public RockPaperScissors()
-	{
-	}
-
-	public RockPaperScissors(String player)
-	{
-		
-	}
-
+  public void RockPaperScissors()
+  {
+    setPlayers;
+  }
 	public void setPlayers(String player)
 	{
 		playChoice = player;
@@ -41,12 +30,31 @@ public class RockPaperScissors
 		{
 			return "Nobody";
 		}
-	
+	  if (player.equals("R")) {
+				if (comp.equals("P")) {
+					return "Computer";
+				}
+				else if (comp.equals("S")) {
+					Return "Player";
+				}
+			}
+		if (player.equals("P")) {
+				if (comp.equals("R")) {
+					return "Player";
+				}
+				else if (comp.equals("S")) {
+					return "Computer";
+				}
+			}
+		if (player.equals("S")) {
+				if (comp.equals("R")) {
+					return "Computer";
+				}
+				else if (comp.equals("P")) {
+					return "Player";
 	}
 
-	public String toString()
+	public String returnString()
 	{
-		String output=("Player had" + playChoice + "\n Computer had" + compChoice + "\n" + determineWinner() + "wins!!" );
-		return output;
+		return "Player had" + playChoice + "\n Computer had" + compChoice + "\n" + determineWinner() + "wins!!" ;
 	}
-}
