@@ -1,3 +1,6 @@
+package unit7;
+
+import java.util.Random;
 import java.util.Scanner;
 import static java.lang.System.*;
 
@@ -8,12 +11,12 @@ public class RockPaperScissors
 
   public void RockPaperScissors()
   {
-    setPlayers;
   }
+  
 	public void setPlayers(String player)
 	{
 		playChoice = player;
-		int num = (int)(Math.random() * (3) + 1);
+		int num = (int)((Math.random())*(3-1) + 1);
 		switch (num) {
 		case 1: compChoice = "R";
 		break;
@@ -30,31 +33,36 @@ public class RockPaperScissors
 		{
 			return "Nobody";
 		}
-	  if (player.equals("R")) {
-				if (comp.equals("P")) {
+		
+	  if (playChoice.equals("R")) {
+				if (compChoice.equals("P")) {
 					return "Computer";
 				}
-				else if (comp.equals("S")) {
-					Return "Player";
-				}
-			}
-		if (player.equals("P")) {
-				if (comp.equals("R")) {
+				else if (compChoice.equals("S")) {
 					return "Player";
 				}
-				else if (comp.equals("S")) {
+			}
+	  
+		if (playChoice.equals("P")) {
+				if (compChoice.equals("R")) {
+					return "Player";
+				}
+				else if (compChoice.equals("S")) {
 					return "Computer";
 				}
 			}
-		if (player.equals("S")) {
-				if (comp.equals("R")) {
+		if (playChoice.equals("S")) {
+				if (compChoice.equals("R")) {
 					return "Computer";
 				}
-				else if (comp.equals("P")) {
+				else if (compChoice.equals("P")) {
 					return "Player";
+				}
 	}
-
+		return "here's your string you silly compiler";
+}
 	public String returnString()
 	{
-		return "Player had" + playChoice + "\n Computer had" + compChoice + "\n" + determineWinner() + "wins!!" ;
+		return "Player had " + playChoice + "\n Computer had " + compChoice + "\n" + determineWinner() + " wins!!" ;
 	}
+}

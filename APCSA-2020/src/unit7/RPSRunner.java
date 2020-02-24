@@ -11,18 +11,20 @@ public class RPSRunner
 {
 	public static void main(String args[])
 	{
-		Scanner keyboard = new Scanner(System.in);
 		String response = "y";
-    while (response.equals("y"))
+  while (response.equals("y"))
     {
-      System.out.println("pick your weapon [R,P,S] :: ");
-			String player = keyboard.toString();
-      RockPaperScissors game = new RockPaperScissors();	
-			game.setPlayers(player);
-      game.returnString();
-			System.out.println("Would you like to play again? [y/n] ::");
-      response = keyboard.toString();
+	  Scanner keyboard = new Scanner(in);
+	  RockPaperScissors game = new RockPaperScissors();	
+	  
+	  out.print("Pick your weapon [R,P,S] :: ");
+	  		String player = keyboard.nextLine();
+	  		game.setPlayers(player);
+	  		System.out.println(game.returnString());
+	  		
+	  	System.out.println("Would you like to play again? [y/n] ::");
+	  	response = keyboard.nextLine();
+	  	System.out.println(" Farewell!");
     }
-	}
 }
-
+}

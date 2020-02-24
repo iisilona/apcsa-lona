@@ -34,7 +34,7 @@ public class Triples
 		}
 		
 
-        for (int i = low; i > 0; i--) {
+        for (int i = number; i > 0; i--) {
             if ((a % i == 0) && (b % i == 0)) {
                 for (int j = i; j > 0; j--) {
                     if ((i % j == 0) && (c % j == 0)) {

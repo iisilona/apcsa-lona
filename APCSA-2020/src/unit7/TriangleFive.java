@@ -35,7 +35,7 @@ public class TriangleFive
 
 	public String toString()
 	{
-		String output;
+		String output = "";
 		char temp = letter;
 		for (int i = 0; i < amount; i++){
 			
@@ -58,3 +58,4 @@ public class TriangleFive
 		}
 		return output;
 	}
+}
