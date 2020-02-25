@@ -1,4 +1,9 @@
-package unit8;
+package Unit8;
+//(c) A+ Computer Science
+//www.apluscompsci.com
+//Name -
+//Date -
+
 public class RaySumLast
 {
 	public static int go(int[] ray)
