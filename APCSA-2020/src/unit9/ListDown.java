@@ -23,6 +23,7 @@ public class ListDown
 				dec ++;
 			}
 		}
+		
 		if (size >= 2){
 			if (nums.get(size-1) < nums.get(size-2)) {
 				dec ++;
