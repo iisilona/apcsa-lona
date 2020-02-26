@@ -2,6 +2,9 @@
 //www.apluscompsci.com
 //Name -
 //Date -
+package unit8;
+
+import static java.lang.System.*;
 
 public static void main( String args[] )
 	{

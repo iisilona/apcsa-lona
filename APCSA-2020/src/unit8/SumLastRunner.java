@@ -1,9 +1,8 @@
-package Unit8;
+package unit8;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-//Date -
-
+import static java.lang.System.*;
 public class SumLastRunner
 {
 	public static void main( String args[] )

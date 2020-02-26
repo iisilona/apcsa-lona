@@ -1,5 +1,6 @@
- 
-package Unit8;
+package unit8;
+
+import static java.lang.System.*;
 
 public class OddToEvenRunner {
 	public static void main( String args[] )

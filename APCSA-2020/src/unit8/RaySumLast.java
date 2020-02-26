@@ -1,8 +1,6 @@
-package Unit8;
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
-//Date -
+package unit8;
+
+import static java.lang.System.*;
 
 public class RaySumLast
 {
