@@ -47,5 +47,9 @@ public class DownRunner
 	ArrayList<Integer> numsH;
 	numsH= new ArrayList<Integer>(Arrays.asList(-111,1,2,3,9,11,20,30));
 	System.out.println(ListDown.go(numsH));
+	
+	ArrayList<Integer> numsI;
+	numsI= new ArrayList<Integer>(Arrays.asList(9,8,7,6,5,4,3,2,0,-2,-989));
+	System.out.println(ListDown.go(numsI));
 	}
 }

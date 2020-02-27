@@ -18,25 +18,20 @@ public class ListDown
 		int dec = 0;
 		int size = nums.size();
 		
-		for (int i = 0; i <= size - 2; i ++) {
-			if (nums.get(i) < nums.get(i+1)) {
-				dec ++;
+		if (size - 2 > 0) {
+			for (int i = 1; i <= size - 2; i++){
+				if(nums.get(i) > nums.get(i-1)) {
+					return false;
+				}
 			}
-		}
-		
-		if (size >= 2){
-			if (nums.get(size-1) < nums.get(size-2)) {
-				dec ++;
+			if(nums.get(size-1) > nums.get(size-2)) {
+				return false;
 			}
-		}
-		
-		if (size < 2) {
+			return true;
+	  }
+		if (size - 2 <= 0) {
 			return false;
 		}
-		
-		if (dec == 0) {
-			return true;
-		}
-		return false;
-	}	
+		return true;
+	}
 }
