@@ -13,6 +13,9 @@ public class Card
 	private int faceNum = 0;
 	private String suitName = "";
 	private String faceName = "";
+	private String customsuitName = "";
+	private String customfaceName = "";
+	private int customRank = 0;
 	
 	public Card(String string, int i) {
 		faceNum = i;
@@ -31,8 +34,8 @@ public class Card
 		setRank();
 	}
 	
-	public int setRank() {
-		return 
+	public int setRank(String rank) {
+		return  
 	}
 	
 	public String setcustomFace(int face) {
