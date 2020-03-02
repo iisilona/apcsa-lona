@@ -17,17 +17,30 @@ public class Card
 	public Card(String string, int i) {
 		faceNum = i;
 		suitName = string;
+		toString();
 	}
 	
-	public String makeCard(String suit, int face) {
+	public void makeCard(String suit, int face) {
 		setFace();
 		setSuit();
-		return(toString());
 	}
 	
+	public void makecustomCard(String suit, String rank, int face) {
+		setcustomFace(face);
+		setSuit();
+		setRank();
+	}
+	
+	public int setRank() {
+		return 
+	}
+	
+	public String setcustomFace(int face) {
+		face
+	}
 	public String setFace() {
 		faceName = FACES[faceNum];
-		return FACES[faceNum];
+		return faceName;
 	}
 	
 	public String setSuit() {
@@ -35,7 +48,7 @@ public class Card
 		}
 
 	public String toString() {
-		return (faceName + " of " + suitName);
+		return (FACES[faceNum] + " of " + suitName);
 	}
 }
  

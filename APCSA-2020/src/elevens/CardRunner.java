@@ -18,7 +18,7 @@ public class CardRunner
 		Card two = new Card("DIAMONDS", 1);
 		out.println(two);
 		//two.setFace(3);
-		//out.println(two);
+		out.println(two);
 
 		Card three = new Card("CLUBS", 4);
 		out.println(three);
