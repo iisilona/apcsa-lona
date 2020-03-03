@@ -16,9 +16,9 @@ public class Deck {
 	
 	private List<Card> cards;
 	private int top;
-	private int deckSize = cards.size();
+	private int deckSize;
 	
-	public void makeDeck() {
+	public Deck() {
 		//loops through each card in deck
 		for (int count = 1; count <= NUMCARDS; count++) {
 			//loops through each suit
@@ -34,7 +34,7 @@ public class Deck {
 		shuffle();
 	}
 
-	 public void makeanyDeck(int[] vals, String[] suits, String[] ranks) {
+	 public Deck(int[] vals, String[] suits, String[] ranks) {
 		//loops through each card in deck
 		for (int count = 0; count < vals.length; count++) {
 			//loops through each suit
@@ -58,20 +58,22 @@ public class Deck {
 	 }
 	
 	public Card dealTopCard(int index) {
-			return cards.get(index);
+		return cards.get(index);
 	}
 	
 	public int size() {
+		deckSize = cards.size();
 		return deckSize;
 	}
 	
-	public Card dealCard() {
+	public Card deal() {
 		if (isEmpty()) {
 			return null;
 		}
 		for (int i = deckSize; i > 0; i--) {
 			dealTopCard(i);
 			deckSize = deckSize - 1;
+			top = i+1;
 		}
 		return cards.get(0);
 	}
