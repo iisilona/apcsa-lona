@@ -52,29 +52,28 @@ public class Shuffler {
 		System.out.println();
 	}
 
-
-	/**
-	 * Apply a "perfect shuffle" to the argument.
-	 * The perfect shuffle algorithm splits the deck in half, then interleaves
-	 * the cards in one half with the cards in the other.
-	 * @param values is an array of integers simulating cards to be shuffled.
-	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int shuffled[] = new int[52];
+		int k = 0;
+		for (int j = 0; j <=25;  j++) {
+			shuffled[k] = values[j];
+			k = k+2;
+		}
+		k = 1;
+		for(int j = 26; j <=51; j++) {
+			shuffled[k] = values[j];
+			k = k+2;
+		}
 	}
 
-	/**
-	 * Apply an "efficient selection shuffle" to the argument.
-	 * The selection shuffle algorithm conceptually maintains two sequences
-	 * of cards: the selected cards (initially empty) and the not-yet-selected
-	 * cards (initially the entire deck). It repeatedly does the following until
-	 * all cards have been selected: randomly remove a card from those not yet
-	 * selected and add it to the selected cards.
-	 * An efficient version of this algorithm makes use of arrays to avoid
-	 * searching for an as-yet-unselected card.
-	 * @param values is an array of integers simulating cards to be shuffled.
-	 */
 	public static void selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int shuffled[] = new int[52];
+		int j = 0;
+		for(int k = 0; k <=51; k++) {
+			j = (int)Math.random()*(52);
+			shuffled[k] = values[j];
+			values[j] = 0;
+		}
 	}
 }
+

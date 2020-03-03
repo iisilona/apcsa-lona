@@ -12,12 +12,12 @@ public class CardRunner
 	{
 		
 		Card one = new Card("SPADES", 9);
-		out.println(one.setSuit());
-		out.println(one.setFace());
+		out.println(one.setSuit("SPADES"));
+		out.println(one.setFace(9));
 
 		Card two = new Card("DIAMONDS", 1);
 		out.println(two);
-		//two.setFace(3);
+		out.println(two.setFace(3));
 		out.println(two);
 
 		Card three = new Card("CLUBS", 4);
