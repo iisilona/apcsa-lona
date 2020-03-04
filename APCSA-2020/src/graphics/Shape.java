@@ -8,6 +8,7 @@
 
 import java.awt.Color; 
 import java.awt.Graphics;
+package graphics;
 
 public class Shape
 {

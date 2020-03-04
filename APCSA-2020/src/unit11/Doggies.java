@@ -2,6 +2,7 @@
 //www.apluscompsci.com
 //Name -
 
+package unit11;
 import java.util.Arrays;
 
 public class Doggies
@@ -10,28 +11,41 @@ public class Doggies
 
 	public Doggies(int size)
 	{
-		//point pups at a new arry of Dog
-		
+		//fixz this to point properly
+		Dog bark[size];
+		Dog *ptr = pups;
 	}
 	
 	public void set(int spot, int age, String name)
 	{
+		Dog d = new Dog (age, name);
 		if(spot >= 0 && spot < pups.length) {
-			
+			pups[spot] = d;
 		}
-		//put a new Dog in the array at spot 
-		//make sure spot is in bounds		
 	}
 
 	public String getNameOfOldest()
 	{
-		
-		return null;
+		String oldest = "";
+		for(int i = 0; i < pups.length; i++) {
+			if (pups[i].getAge() > pups[i + 1].getAge()) {
+				oldest = pups[i].getName();
+			}
+			else oldest = pups[i+1].getName();
+		}
+		return oldest;
 	}
 
 	public String getNameOfYoungest()
 	{
-		return null;
+		String youngest = "";
+		for(int i = 0; i < pups.length; i++) {
+			if (pups[i].getAge() < pups[i + 1].getAge()) {
+				youngest = pups[i].getName();
+			}
+			else youngest = pups[i+1].getName();
+		}
+		return youngest;
 	}
 
 	public String toString()

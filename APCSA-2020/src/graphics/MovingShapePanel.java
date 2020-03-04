@@ -23,7 +23,7 @@ public class MovingShapePanel extends JPanel implements Runnable
 	{
 		setBackground(Color.WHITE);
 		setVisible(true);
-
+		sh = new Shape;
 		//refer sh to a new Shape
 
 
