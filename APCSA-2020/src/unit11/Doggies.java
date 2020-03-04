@@ -16,12 +16,16 @@ public class Doggies
 	
 	public void set(int spot, int age, String name)
 	{
+		if(spot >= 0 && spot < pups.length) {
+			
+		}
 		//put a new Dog in the array at spot 
 		//make sure spot is in bounds		
 	}
 
 	public String getNameOfOldest()
 	{
+		
 		return null;
 	}
 
