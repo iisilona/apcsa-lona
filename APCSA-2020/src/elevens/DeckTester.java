@@ -1,6 +1,8 @@
 /**
  * This is a class that tests the Deck class.
  */
+package elevens;
+
 public class DeckTester {
 
 	/**
@@ -13,7 +15,7 @@ public class DeckTester {
 		String[] ranks = {"jack", "queen", "king"};
 		String[] suits = {"blue", "red"};
 		int[] pointValues = {11, 12, 13};
-		Deck d = new Deck(ranks, suits, pointValues);
+		Deck d = new Deck(pointValues, suits, ranks);
 
 		System.out.println("**** Original Deck Methods ****");
 		System.out.println("  toString:\n" + d.toString());

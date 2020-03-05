@@ -15,7 +15,7 @@ public class DeckRunner
 		System.out.println( "All cards in order." );
 		for( int j = 1; j <= 52; j++ )
 		{
-			System.out.println( test.dealCard() );
+			System.out.println( test.deal() );
 		}
 		
 		test.shuffle();	
@@ -23,7 +23,7 @@ public class DeckRunner
 		System.out.println( "\n\nAll cards after shuffling." );
 		for( int j = 1; j <= 52; j++ )
 		{
-			System.out.println( test.dealCard() );
+			System.out.println( test.deal() );
 		}				
 	}
 }
