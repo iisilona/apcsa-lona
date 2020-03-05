@@ -79,7 +79,7 @@ public class Deck {
 	}
    
 	public void shuffle() {
-		for (int k = 51; k <=1; k--) {
+		for (int k = deckSize; k <=1; k--) {
 			int r = (int)Math.random()*(k);
 			Collections.swap(cards,  r,  k);
 		}
