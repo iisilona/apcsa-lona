@@ -97,6 +97,7 @@ public class DeckTester {
 	 * @param d is a deck that should be empty.
 	 */
 	private static void testEmpty(Deck d) {
+		System.out.println(d.size());
 		assert d.size() == 0 :  "Size for an empty deck is " + d.size()
 			+ ". It should be 0.";
 		assert d.isEmpty() : "isEmpty is false for an empty deck.";

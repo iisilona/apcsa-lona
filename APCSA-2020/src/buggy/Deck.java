@@ -34,17 +34,12 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		cards = new ArrayList<Card>();
-		if (ranks.length == 0) {
-			cards = null;
-		}
-		else {
-			for (int j = 0; j < ranks.length;  j++) {
-				for (String suitString : suits) {
+		for (int j = 0; j < ranks.length; j++) {
+			for (String suitString : suits) {
 				cards.add(new Card(ranks[j], suitString, values[j]));
-				}
 			}
-			shuffle();
 		}
+		shuffle();
 	}
 
 
@@ -53,7 +48,7 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		if (size == 0) {
+		if (cards.isEmpty()) {
 			return true;
 		}
 		else return false;
@@ -72,21 +67,15 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		if (cards.size() > 1) {
-			for (int k = cards.size() - 1; k > 0; k--) {
-				int howMany = k + 1;
-				int start = 0;
-				int randPos = (int) (Math.random() * howMany) + start;
-				Card temp = cards.get(k);
-				cards.set(k, cards.get(randPos));
-				cards.set(randPos, temp);
-			}
-			size = cards.size();
+		for (int k = cards.size(); k > 1; k--) {
+			int howMany = k + 1;
+			int start = 0;
+			int randPos = (int) (Math.random() * howMany) + start;
+			Card temp = cards.get(k);
+			cards.set(k, cards.get(randPos));
+			cards.set(randPos, temp);
 		}
-		if (cards.size() == 1) {
-			size = cards.size();
-		}
-		else size = 0;
+		size = cards.size();
 	}
 
 	/**
