@@ -1,3 +1,4 @@
+package celeb;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.Color;

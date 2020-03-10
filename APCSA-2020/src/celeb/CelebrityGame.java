@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class CelebrityGame
 {
 	
-	private String celebName;
+	private String gameCelebrity;
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
@@ -19,7 +19,7 @@ public class CelebrityGame
 	 * The GUI frame for the Celebrity game.
 	 */
 
-	private ArrayList <Celebrity> celebs;
+	private ArrayList <Celebrity> celebGameList;
 
 	/**
 	 * Builds the game and starts the GUI
@@ -33,13 +33,15 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
+		celebGameList = new ArrayList<Celebrity>();
+		gameWindow.replaceScreen("START");
 	}
 
 	// Determines if the supplied guess is correct.
 	public boolean processGuess(String guess)
 	{
 		String myGuess = guess.trim();
-		if (myGuess.equalsIgnoreCase(celebName)) {
+		if (myGuess.equalsIgnoreCase(gameCelebrity)) {
 			return true;
 		}
 		else return false;
@@ -52,7 +54,11 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		
+		if (celebGameList != null && celebGameList.size() > 0 )
+		{
+		this.gameCelebrity = celebGameList.get(0);
+		gameWindow.replaceScreen("GAME");
+		}
 	}
 
 	/**
@@ -67,7 +73,10 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		
+		if (validateCelebrity(name) == true) {
+			Celebrity c = new Celebrity(name, guess);
+			celebGameList.add(c);
+		}
 	}
 
 	/**
@@ -77,7 +86,10 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		return false;
+		if (name.length() <= 4) {
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -89,7 +101,10 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return false;
+		if (clue.length() <= 10) {
+			return false;
+		}
+		else return true;
 	}
 
 	/**

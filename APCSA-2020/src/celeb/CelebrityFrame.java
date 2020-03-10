@@ -1,6 +1,6 @@
 package celeb;
-
 import java.awt.CardLayout;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -42,7 +42,11 @@ public class CelebrityFrame extends JFrame
 	{
 		//The first line of any subclass should ALWAYS be a correct call to the super constructor.
 		super();
-	
+		this.controller = controllerRef;
+		this.panelCards = new JPanel(new CardLayout());
+		this.gamePanel = new CelebrityPanel(controller);
+		this.startPanel = new StartPanel(controller);
+		setupFrame();
 	}
 	
 	/**
@@ -50,6 +54,19 @@ public class CelebrityFrame extends JFrame
 	 */
 	private void setupFrame()
 	{
+		panelCards.add(gamePanel, "GAME");
+		panelCards.add(startPanel, "START"); 
+		this.setSize(800,800);
+		this.setTitle("Celebrity Game");
+		this.add(panelCards);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		
+		replaceScreen("START");
+		
+		//Must be the last line of the configuration segment to allow the GUI to be displayed. 
+		//If not set as true the window will not display and the app will terminate.
+		this.setVisible(true); 
 		
 	}
 	
@@ -59,7 +76,12 @@ public class CelebrityFrame extends JFrame
 	 */
 	public void replaceScreen(String screen)
 	{
-		
+		if(screen.equals("GAME"))
+		{
+			//If the selected screen is the game, sends the first clue to the screen.
+			gamePanel.addClue(controller.sendClue());
+		}
+		//Sets the chosen JPanel subclass as the active class
+		((CardLayout)panelCards.getLayout()).show(panelCards , screen);	
 	}
-	
 }

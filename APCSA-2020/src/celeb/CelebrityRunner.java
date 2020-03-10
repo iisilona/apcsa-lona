@@ -3,6 +3,7 @@
  * @author cody.henrichsen
  *
  */
+package celeb;
 public class CelebrityRunner
 {
 	/**
