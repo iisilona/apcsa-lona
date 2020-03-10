@@ -61,16 +61,6 @@ public class CelebrityGame
 		}
 	}
 
-	/**
-	 * Adds a Celebrity of specified type to the game list
-	 * 
-	 * @param name
-	 *            The name of the celebrity
-	 * @param guess
-	 *            The clue(s) for the celebrity
-	 * @param type
-	 *            What type of celebrity
-	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
 		if (validateCelebrity(name) == true) {
@@ -79,11 +69,6 @@ public class CelebrityGame
 		}
 	}
 
-	/**
-	 * Validates the name of the celebrity. It must have at least 4 characters.
-	 * @param name The name of the Celebrity
-	 * @return If the supplied Celebrity is valid
-	 */
 	public boolean validateCelebrity(String name)
 	{
 		if (name.length() <= 4) {
@@ -92,13 +77,6 @@ public class CelebrityGame
 		return true;
 	}
 
-	/**
-	 * Checks that the supplied clue has at least 10 characters or is a series of clues
-	 * This method would be expanded based on your subclass of Celebrity.
-	 * @param clue The text of the clue(s)
-	 * @param type Supports a subclass of Celebrity 
-	 * @return If the clue is valid.
-	 */
 	public boolean validateClue(String clue, String type)
 	{
 		if (clue.length() <= 10) {
@@ -107,14 +85,9 @@ public class CelebrityGame
 		else return true;
 	}
 
-	/**
-	 * Accessor method for the current size of the list of celebrities
-	 * 
-	 * @return Remaining number of celebrities
-	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return celebGameList.size();
 	}
 
 	/**
