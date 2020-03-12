@@ -14,7 +14,7 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
-
+	public CelebrityFrame gameWindow;
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
@@ -26,6 +26,8 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
+		celebGameList = new ArrayList<Celebrity>();
+		gameWindow = new CelebrityFrame(this);
 	}
 
 	/**
@@ -98,7 +100,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return gameCelebrity.getClue();
 	}
 
 	/**
@@ -109,6 +111,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		gameCelebrity.getAnswer();
 	}
 }
