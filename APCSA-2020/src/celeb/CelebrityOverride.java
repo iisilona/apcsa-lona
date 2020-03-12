@@ -31,16 +31,6 @@ public class celebextension extends Celebrity {
 		
 		return currentClue;
 	}
-  
-  @Override
-  public String getAnswer()
-  {
-   if (clueList.size() == 0) 
-   {
-      processClues();
-   }
-  String
-	
 	
 	@Override
 	public String toString()
