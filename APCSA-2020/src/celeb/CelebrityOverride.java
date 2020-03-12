@@ -1,10 +1,10 @@
-package CelebrityProject;
+package celeb;
 import java.util.ArrayList;
 
-public class celebextension extends Celebrity {
+public class CelebrityOverride extends Celebrity {
 	private ArrayList<String> clueList;
 	
-	public celebextension(String answer, String clues)
+	public CelebrityOverride(String answer, String clues)
 	{
 		super(answer, clues);
 		processClues();
