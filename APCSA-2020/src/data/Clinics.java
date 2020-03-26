@@ -1,4 +1,4 @@
-ackage DataLab;
+package data;
 
 public class Clinics {
 	
