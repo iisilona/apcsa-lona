@@ -1,4 +1,4 @@
-package DataLab;
+package data;
 import static java.lang.System.*;
 
 public class Cereal {
