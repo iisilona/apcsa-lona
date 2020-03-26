@@ -1,22 +1,22 @@
 package data;
 
-public class Clinics {
+public class Homes {
 	
 	
-	//the flu seasonyear
-	private String season;
+	//the neighborhood in SD
+	private String Neighborhood;
 	
-	//the postal code of a clinic in the CHICAGO AREA.
+	//the postal code of said neighborhood
 	private int postalCode;
 	
-	//street of the clinic
+	//street name
 	private String street;
 	
 	private String state;
 	private String city;
 
 	public Clinics(String s, int pC, String street, String city, String state) {
-		setSeason(s);
+		setNeighborhood(s);
 		setpostalCode(pC);
 		setStreet(street);
 		setState(state);
@@ -25,12 +25,12 @@ public class Clinics {
 
 
 //gets, sets, functions.
-	public String getSeason() {
-		return season;
+	public String getNbhd() {
+		return neighborhood;
 	}
 
-	public void setSeason(String season) {
-		this.season = season;
+	public void setNeighborhood(String neighborhood) {
+		this.neighborhood = neighborhood;
 	}
 
 	public int getpostalCode() {
