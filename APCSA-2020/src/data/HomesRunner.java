@@ -8,15 +8,16 @@ import core.data.DataSource;
 public class ClinicsRunner {
 
 	public static void main(String[] args) {
-		System.out.println("Postal codes for Chicago area Clinics specializing in disease prevention.");
+		System.out.println("Cities with park, beach, open space, or coastline access in Cali.");
 		
-		//https://data.cityofchicago.org/api/views/w3hg-pyhz/rows.xml?accessType=DOWNLOAD
-		DataSource DS = DataSource.connect("https://data.cityofchicago.org/api/views/w3hg-pyhz/rows.xml?accessType=DOWNLOAD").load();
+		//https://data.ca.gov/dataset/park-beach-open-space-or-coastline-access#
+//https://data.chhs.ca.gov/dataset/ff3083ea-17cb-4fb2-b51e-183444515b67/resource/b810928a-80cd-4b7a-a4cd-e5dda9a34171/download/hciaccesstoparks-data-dictionary.xlsx
+		DataSource DS = DataSource.connect("https://data.chhs.ca.gov/dataset/ff3083ea-17cb-4fb2-b51e-183444515b67/resource/b810928a-80cd-4b7a-a4cd-e5dda9a34171/download/hciaccesstoparks-data-dictionary.xlsx").load();
 
 		DS.printUsageString();
 
 		//the first part is the season, the second part is the postal code, and  then street adress, then  city, then state.
-		ArrayList<Clinics> allClinics = DS.fetchList(Clinics.class, "row/row/season", "row/row/postal_code", "row/row/street1", "row/row/city", "row/row/state");
+		ArrayList<Clinics> allClinics = DS.fetchList(Clinics.class, "row/row/", "row/row/postal_code", "row/row/street1", "row/row/city", "row/row/state");
 		System.out.println("Number of Clinics: " + allClinics.size());
 
 		
