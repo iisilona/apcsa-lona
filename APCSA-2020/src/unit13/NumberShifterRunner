@@ -1,0 +1,21 @@
+package unit13;
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+import static java.lang.System.*;
+
+public class NumberShifterRunner
+{
+	public static void main( String args[] ) throws IOException
+	{
+		for (int i=0; i<3; i++) {
+			int[] arr = NumberShifter.makeLucky7Array(20);
+			System.out.println("original: " + Arrays.toString(arr));
+			NumberShifter.shift(arr);
+			System.out.println("Shifted: " + Arrays.toString(arr));
+		}
+	}
+}
+
