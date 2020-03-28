@@ -1,68 +1,46 @@
 package data;
 
-public class Homes {
+public class Spending {
 	
-	
-	//the neighborhood in SD
-	private String Neighborhood;
-	
-	//the postal code of said neighborhood
-	private int postalCode;
-	
-	//street name
-	private String street;
-	
-	private String state;
+
+	private String TotalExpend;
+	private String Pop;
+	private String Capita;
+	private String FiscalYear;
 	private String city;
 
-	public Clinics(String s, int pC, String street, String city, String state) {
-		setNeighborhood(s);
-		setpostalCode(pC);
-		setStreet(street);
-		setState(state);
+	public Spending(int ID, String city, String FiscalYear, String TotalExpend, String Pop, String Capita) {
+		setID(ID);
 		setCity(city);
+		setFiscalYr(FiscalYear);
+		setTotal(TotalExpend);
+		setPop(Pop);
+		setCapita(Capita);
 	}
 
 
-//gets, sets, functions.
-	public String getNbhd() {
-		return neighborhood;
-	}
-
-	public void setNeighborhood(String neighborhood) {
-		this.neighborhood = neighborhood;
-	}
-
-	public int getpostalCode() {
-		return postalCode;
-	}
-
-	public void setpostalCode(int postalCode) {
-		this.postalCode = postalCode;
-	}
-	
-	public String getStreet() {
-		return street;
-	}
-	
-	public void setStreet(String street) {
-		this.street = street;
-	}
-	
-	public String getState() {
-		return state;
-	}
-	
-	public void setState(String state) {
-		this.state = state;
+//gets, sets, functions. buckle in this is LONg'
+	public void String setCity(String city) {
+		this.city = city;
 	}
 	
 	public String getCity() {
 		return city;
 	}
+
+	public void String setFiscalYr(String FiscalYear) {
+		this.FiscalYear = FiscalYear;
+	}
 	
-	public void setCity(String city) {
-		this.city = city;
+	public String getFiscalYear() {
+		return FiscalYear;
+	}
+	
+	public void String setTotalExpend(String TotalExpend) {
+		this.TotalExpend =  TotalExpend;
+	}
+	
+	public void String setPop() {
 	}
 
 
