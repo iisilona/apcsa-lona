@@ -1,8 +1,9 @@
+package pong;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
 
-{
+class SpeedUpBall extends Ball {
 
    public SpeedUpBall()
    {
@@ -41,16 +42,5 @@ import java.util.Random;
    {
 	   if (ySpd<0) super.setYSpeed(ySpd-1);
 	   else super.setYSpeed(ySpd+1);
-   }
-}
-
-   }
-
-   public void setYSpeed( int ySpd )
-   {
-
-
-
-
    }
 }

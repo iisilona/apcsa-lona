@@ -1,3 +1,4 @@
+package pong;
 import javax.swing.JFrame;
 import java.awt.Component;
 

@@ -1,10 +1,13 @@
+package pong;
 import java.awt.Color;
 import java.awt.Graphics;
 
 public class Paddle extends Block
 {
    //instance variables
-  ublic Paddle()
+	private int speed;
+	
+  public Paddle()
    {
 	  this(10, 10);
    }
