@@ -26,7 +26,17 @@ public class Ship extends MovingThing
 
 	public Ship(int x, int y, int s)
 	{
-	   //add code here
+	   
+	   speed=s;
+	   try
+		{
+			URL url = getClass().getResource("/images/ship.jpg");
+			image = ImageIO.read(url);
+		}
+		catch(Exception e)
+		{
+			//feel free to do something here
+		}
 	}
 
 	public Ship(int x, int y, int w, int h, int s)
@@ -47,7 +57,7 @@ public class Ship extends MovingThing
 
 	public void setSpeed(int s)
 	{
-	   //add more code
+	   speed=s;
 	}
 
 	public int getSpeed()
@@ -57,7 +67,19 @@ public class Ship extends MovingThing
 
 	public void move(String direction)
 	{
-		//add code here
+		switch (direction) {
+		case LEFT:
+		x = x - 1;
+		break;
+		case RIGHT:
+		x = x + 1;
+		break;
+		case UP:
+		y = y - 1;
+		break;
+		case DOWN:
+		y = y + 1;
+		break;
 	}
 
 	public void draw( Graphics window )
