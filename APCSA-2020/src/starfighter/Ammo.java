@@ -11,6 +11,10 @@ import javax.imageio.ImageIO;
 public class Ammo extends MovingThing
 {
 	private int speed;
+	private int xPos;
+	private int yPos;
+	private int width;
+	private int height;
 
 	public Ammo()
 	{
@@ -19,22 +23,28 @@ public class Ammo extends MovingThing
 
 	public Ammo(int x, int y)
 	{
-		//add code
+		xPos = x;
+		yPos = y;
+		width = 10;
+		height = 10;
+		speed = 1;
 	}
 
 	public Ammo(int x, int y, int s)
 	{
-		//add code
+		xPos = x;
+		yPos = y;
+		speed = s;
 	}
 
 	public void setSpeed(int s)
 	{
-	   //add code
+	   speed = s;
 	}
 
 	public int getSpeed()
 	{
-	   return 0;
+	   return speed;
 	}
 
 	public void draw( Graphics window )
