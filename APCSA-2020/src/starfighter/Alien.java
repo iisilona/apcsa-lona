@@ -13,6 +13,10 @@ public class Alien extends MovingThing
 {
 	private int speed;
 	private Image image;
+	private int xPos;
+	private int yPos;
+	private int width;
+	private int height;
 
 	public Alien()
 	{
@@ -21,12 +25,19 @@ public class Alien extends MovingThing
 
 	public Alien(int x, int y)
 	{
-		//add code here
+		xPos = x;
+		yPos = y;
+		width = 10;
+		height = 10;
 	}
 
 	public Alien(int x, int y, int s)
 	{
-		//add code here
+		xPos = x;
+		yPos = y;
+		width = 10;
+		height = 10;
+		speed = s;
 	}
 
 	public Alien(int x, int y, int w, int h, int s)
@@ -46,17 +57,29 @@ public class Alien extends MovingThing
 
 	public void setSpeed(int s)
 	{
-	   //add code
+	   speed = s;
 	}
 
 	public int getSpeed()
 	{
-	   return 0;
+	   return speed;
 	}
 
    public void move(String direction)
 	{
-	   //add code here
+		switch (direction) {
+		case LEFT:
+		x = x - 1;
+		break;
+		case RIGHT:
+		x = x + 1;
+		break;
+		case UP:
+		y = y - 1;
+		break;
+		case DOWN:
+		y = y + 1;
+		break;
 	}
 
 	public void draw( Graphics window )
