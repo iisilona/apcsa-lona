@@ -68,9 +68,44 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		graphToBack.setColor(Color.BLACK);
 		graphToBack.fillRect(0,0,800,600);
 
-		if(keys[0] == true)
+		ship.draw(graphToBack);
+		horde.drawEmAll(graphToBack);
+		shots.drawEmAll(graphToBack);
+		shots.moveEmAll();
+		horde.moveEmAll();
+		horde.removeDeadOnes(shots.getList());
+		shots.cleanEmUp();
+		
+		if (gameOver) 
+		{
+			graphToBack.setColor(Color.WHITE);
+			if (horde.getList().size()==0)
+		   	{
+				graphToBack.drawString("You won!", 375, 200);
+		   	}
+			else graphToBack.drawString("You lost!", 375, 200);
+		}
+		
+		if(keys[0] == true && ship.getX()>ship.getSpeed())
 		{
 			ship.move("LEFT");
+		}
+		if (keys[1] == true && ship.getX()<(800-ship.getSpeed()-ship.getWidth()))
+		{
+			ship.move("RIGHT");
+		}
+		if (keys[2] == true && ship.getY()>ship.getSpeed())
+		{
+			ship.move("UP");
+		}
+		if (keys[3] == true && ship.getY()<(600-ship.getSpeed()-ship.getHeight()-20))
+		{
+			ship.move("DOWN");
+		}
+		if (keys[4] == true && !gameOver)
+		{
+			shots.add(new Ammo((ship.getX()+ship.getWidth()/2), ship.getY()-5, 5, 5, 5));
+			keys[4]=false;
 		}
 
 		//add code to move Ship, Alien, etc.
