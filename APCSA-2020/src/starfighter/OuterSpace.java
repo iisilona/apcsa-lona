@@ -21,7 +21,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 	private Alien alienTwo;
 
 
-  	 private AlienHorde horde;
+   private AlienHorde horde;
 	private Bullets shots;
 
 
@@ -34,8 +34,9 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 
 		keys = new boolean[5];
 
-		//instantiate other instance variables
-		//Ship, Alien
+		Alien alienOne = new Alien;
+		Alien alienTwo = new Alien;
+		Ship ship = new Ship
 
 		this.addKeyListener(this);
 		new Thread(this).start();
